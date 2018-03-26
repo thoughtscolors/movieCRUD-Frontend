@@ -21,17 +21,32 @@ const showMovies = () => {
 
 const renderMoviesTable = (moviesArray) => {
   moviesArray.forEach(movie => {
-    let id = movie.id
-    let title = movie.title
-    let director = movie.director
-    let year = movie.year
-    let rating = movie.rating
+    let keys = Object.keys(movie)
+    console.log(keys);
     let editButton = document.createElement('button')
+    editButton.textContent = "Edit"
     editButton.addEventListener('click', editMovie)
     let deleteButton = document.createElement('button')
+    deleteButton.textContent = "Delete"
     deleteButton.addEventListener('click', deleteMovie)
-    let insertionPoint = document.querySelector('.container')
-    insertionPoint.append(`${id}, ${title}, ${director}, ${year}, ${rating}, ${editButton}, ${deleteButton}`)
-  })
+    let insertionPoint = document.querySelector('tbody')
 
+    let tr = document.createElement('tr')
+    tr.setAttribute('id', movie.id)
+    keys.forEach(key => {
+      if (key === 'title' || key === 'director' || key === 'year' || key === 'rating') {
+      let td = document.createElement('td')
+      td.textContent = `${movie[key]}`
+      tr.append(td)
+    }
+    })
+    let editTD = document.createElement('td')
+    editTD.append(editButton)
+    tr.append(editTD)
+    let delTD = document.createElement('td')
+    delTD.append(deleteButton)
+    tr.append(delTD)
+
+    insertionPoint.append(tr)
+  })
 }

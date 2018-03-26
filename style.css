@@ -7,7 +7,7 @@
   height: 100%;
   color: snow;
   padding: 1em;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .title {
@@ -29,7 +29,7 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   background-color: snow;
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 .container {
@@ -38,6 +38,7 @@ body {
   margin-top: 1em;
   text-align: center;
   width: 80%;
+
 }
 
 #save-status {
@@ -54,13 +55,8 @@ body {
     transition: opacity .5s; */
 }
 
-table {
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-}
-
-th, td {
-    padding: 1em 1em .9em 1em;
+th, td, tr {
+    padding: 1em 1em .8em 1em;
     text-align: left;
-    /* border-bottom: 1px solid #ddd; */
+    border-spacing: 0;
 }
