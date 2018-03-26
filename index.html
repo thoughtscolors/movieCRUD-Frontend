@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie CRUD</title>
+    <script src="index.js" charset="utf-8"></script>
+    <script src="edit.js" charset="utf-8"></script>
+    <script src="render.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">\
+    </script>
+  </head>
+  <body>
+    <div class="header">WEEEEEEEEEIRRD MOVIES to shake a stick at.
+      <div class="title">
+        <button value="new" id="show">Show Movies</button>
+        <button id="new">Add Movie</button>
+        <div id="save-status"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <table>
+        <tbody>
+          <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Year</th>
+            <th>Rating</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>
