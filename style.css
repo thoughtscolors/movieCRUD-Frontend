@@ -25,6 +25,10 @@ button {
   font-size: .7em;
 }
 
+#save {
+  margin-bottom: 2em;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -39,6 +43,28 @@ body {
   text-align: center;
   width: 80%;
 
+}
+
+.form-container {
+  margin: auto;
+  /* border: 1px  solid; */
+  margin-top: 1em;
+  text-align: center;
+  width: 80%;
+  font-size: 1.2em;
+}
+
+input {
+  font-size: 1.2em;
+}
+
+.hidden {
+  display: none;
+}
+
+#image {
+  max-width: 100%;
+  margin: auto;
 }
 
 #save-status {
