@@ -10,7 +10,7 @@ const addMovie = () => {
 
 
 
-  axios.post(`http://localhost:3000/movies/`, { title, director, year, rating, url })
+  axios.post(`https://blooming-wildwood-85758.herokuapp.com/movies/`, { title, director, year, rating, url })
     .then(res => {
       getMovies()
       return res;
@@ -21,10 +21,10 @@ const addMovie = () => {
 }
 
 const getMovieDetails = () => {
-  
+
   const id = event.target.parentNode.id
 
-  axios.get(`http://localhost:3000/movies/${id}`)
+  axios.get(`https://blooming-wildwood-85758.herokuapp.com/movies/${id}`)
   .then(res => {
     let result = res.data.data.fulfillmentValue
     renderMovieDetails(result)
@@ -38,7 +38,7 @@ const editMovieDetails = () => {
 
   const id = event.target.parentNode.parentNode.id
 
-  axios.get(`http://localhost:3000/movies/${id}`)
+  axios.get(`https://blooming-wildwood-85758.herokuapp.com/movies/${id}`)
   .then(res => {
     let result = res.data.data.fulfillmentValue
     renderEditForm(result)
@@ -58,8 +58,8 @@ const saveMovieDetails = () => {
   let url = document.querySelector('#url').value
 
 
-
-  axios.put(`http://localhost:3000/movies/${id}`, { title, director, year, rating, url })
+//whys it still thinking localhost3000
+  axios.put(`https://blooming-wildwood-85758.herokuapp.com/movies/${id}`, { title, director, year, rating, url })
     .then(res => {
       getMovies()
       return res;
@@ -73,7 +73,7 @@ const deleteMovie = () => {
 
   let id = event.target.parentNode.parentNode.id
 
-  axios.delete(`http://localhost:3000/movies/${id}`)
+  axios.delete(`https://blooming-wildwood-85758.herokuapp.com/movies/${id}`)
   .then(res => {
     getMovies()
     return res
