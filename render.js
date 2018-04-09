@@ -1,7 +1,7 @@
 const getMovies = () => {
 
   let displayMessage = document.getElementById("save-status")
-  axios.get(`http://localhost:3000/movies`)
+  axios.get(`https://blooming-wildwood-85758.herokuapp.com/movies/`)
   .then(res => {
     displayMessage.innerHTML = "Success!"
     displayMessage.style.backgroundColor = "rgba(124, 252, 0, .5)"

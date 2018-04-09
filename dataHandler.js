@@ -58,7 +58,7 @@ const saveMovieDetails = () => {
   let url = document.querySelector('#url').value
 
 
-//whys it still thinking localhost3000
+
   axios.put(`https://blooming-wildwood-85758.herokuapp.com/movies/${id}`, { title, director, year, rating, url })
     .then(res => {
       getMovies()
